@@ -2,7 +2,7 @@ var page = require('webpage').create();
 var fs   = require('fs');
 var friendcount=0;
 var t;
-var userid="joe.wang.585112"; //朱學恆
+var userid="joe.wang.585112"; //initial home god
 var taskqueue= new Array();
 var alllinks=0;
 var bfscount=0;
@@ -20,8 +20,8 @@ page.viewportSize = { width: 1014, height: 800 };
 page.open("http://www.facebook.com/login.php", function(status) {
   if (status === "success") {
     page.evaluate(function() {
-        document.getElementById('email').value = 'eagle_rayp@hotmail.com';
-        document.getElementById('pass').value   = '0953505318we';   
+        document.getElementById('email').value = ''; //fill acc and pw
+        document.getElementById('pass').value   = '';   
         document.querySelector('form').submit();
     });
     window.setTimeout(function() {
